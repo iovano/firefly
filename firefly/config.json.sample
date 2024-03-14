@@ -1,0 +1,31 @@
+{
+    "verbosity": 1,
+    "gpio": {
+        "input": 4,
+        "output": 7,
+        "inertia": 80,
+        "on": 1,
+        "off": 0
+    },    
+    "wifi": {
+        "active": false,
+        "hostname": "pico-spa",
+        "country": "DE",
+        "networks": {
+            "<NETWORK SSID>" : "<PASSPHRASE>"
+        },
+        "onSuccess": "http://example.com/notify/"
+    },
+    "trigger": {
+        "shuffle": false,
+        "tact": 2,
+        "uriPrefix": "http://example.com/play_sound/",
+        "uri": [
+            "Liechtenstein/geilertyp.mp3"
+        ],
+        "uriSuffix": 
+            {"day": "&volume=-10",
+             "night": "&volume=-20"
+        }
+    }
+}
