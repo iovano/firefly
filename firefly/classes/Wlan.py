@@ -33,7 +33,7 @@ class Wlan(Loggable):
     async def connect(self):
         self.debug("Establishing Wifi-Connection...")
         self.wlan.active(True)
-        for ssid, password in self.networks.items():
+        for ssid, password in self.network.items():
             self.debug("Trying to connect with network '"+ssid+"'...")
             self.wlan.connect(ssid, password)
             counter = 0
@@ -43,12 +43,13 @@ class Wlan(Loggable):
                 sleep(1)
             if (self.wlan.isconnected() and self.wlan.status() >= 0):
                 self.ip = self.wlan.ifconfig()[0]
-                ntptime.settime()
                 self.log("WIFI Connection active ("+self.ip+")")
                 for i in range(8):
                     self.led.toggle()
                     sleep(0.05)
                 self.led.off()
+                self.log("Trying to synchronize local time (Internet Connection required)...")
+                ntptime.settime()
                 return self.wlan
             else:
                 self.debug("Network Timeout")
