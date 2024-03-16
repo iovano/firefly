@@ -11,7 +11,7 @@
         "active": false,
         "hostname": "pico-spa",
         "country": "DE",
-        "networks": {
+        "network": {
             "<NETWORK SSID>" : "<PASSPHRASE>"
         },
         "onSuccess": "http://example.com/notify/"
