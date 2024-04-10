@@ -27,6 +27,5 @@ class DateHelper:
                 t1 = DateHelper.createTimeFromString(times[0])
                 t2 = DateHelper.createTimeFromString(times[1])
                 if current>=t1 and current<=t2:
-                    print("Date ("+period+") is in range ("+str(t1)+"<"+str(current)+"<"+str(t2)+")")
                     return True
         return False
