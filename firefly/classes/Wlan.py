@@ -15,6 +15,7 @@ class Wlan(Loggable):
     ip:         str = None
     wlan:       network.WLAN = None
     timeout:    int = 3
+    powersave: bool = False
     led:        Pin = None
     server: Server  = None
     autoConnect:bool= True
@@ -33,6 +34,9 @@ class Wlan(Loggable):
     async def connect(self):
         self.debug("Establishing Wifi-Connection...")
         self.wlan.active(True)
+        if (not self.powersave):
+            self.log("powersave mode off")
+            self.wlan.config(pm = 0xa11140)
         for ssid, password in self.network.items():
             self.debug("Trying to connect with network '"+ssid+"'...")
             self.wlan.connect(ssid, password)
