@@ -84,26 +84,28 @@ class Relay(Loggable):
             self.counter += 1
             try:
                 current = self.input.value()
+                self.debug(str(current)+" ("+str(self.counter - self.idleSince)+"/"+str(self.inertia)+")")                
                 if (self.testMode and random.randint(0,30) == 0):
                     current = self.on if (current == self.off) else self.off
                     previous = not self.on
                     self.debug("TEST INCIDENCE CREATED")
                     self.idleSince = - self.inertia
-                self.debug(str(current))
                 blink = 0
                 if (current == self.off):
                     togo = round((self.counter - self.idleSince) / (self.inertia) * 100)
-                    if (togo <= 100): 
-                        if (self.counter % self.fps >= togo * self.fps / 100 and self.counter % 2 == 0):
-                            blink = 1
+                    if (togo <= 50): 
+                        self.debug(str(togo))
+                        blink = (self.counter % self.fps >= togo * self.fps / 50 or self.counter % 2 == 1)
+                    elif (togo <= 100):
+                        blink = (self.counter % self.fps >= (togo - 50) * self.fps / 50 - 1 and self.counter % 2 == 0)
                     elif (previous != current):
                         previous = current
                         self._onIdle()
                     else:
                         blink = (self.counter % (self.fps * 4) == 0)
-                elif (self.counter > self.idleSince + self.inertia + 5):
-                    blink = 1
+                else:
                     self.idleSince = self.counter
+                    blink = self.counter % (self.fps * 2)> 0
                     if (previous != current):
                         previous = current
                         self._onTrigger()
