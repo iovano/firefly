@@ -1,0 +1,92 @@
+{
+    "gpio": {
+        "input": 16,
+        "output": 4,
+        "inertia": 600,
+        "testMode": 0,
+        "on": 1,
+        "off": 0
+    },    
+    "wifi": {
+        "hostname": "pico-spa",        
+        "onSuccess": "http://pi-spa.fritz.box/alert/trigger.sh?sound=Epubli/test.wav"
+    },
+    "trigger": {
+        "prefix": "http://pi-spa.fritz.box/alert/trigger.sh?sound=",
+        "uri": [
+            "Liechtenstein/liechtenstein-geilertyp.mp3"
+        ],
+        "suffix": "&volume=-20",        
+        "period": {
+            "08:00-20:00": {
+                "tact": 2,
+                "uri": [
+                    "Maerchen/alice-alles-sah-fast-genauso-aus-wie-auf-der-gegenseite.mp3",
+                    "Maerchen/alice-kletterte-auf-den-kaminsims-in-den-hohen-spiegel-hinein-eigenartig.mp3",
+                    "Maerchen/alice-naher-grosser-spiegel-neblige-bewegung-streckte-die-hand-aus.mp3",
+                    "Maerchen/alice-schmetterling-verschwand-grosser-wandspiegel-kamin.mp3",
+                    "Maerchen/alice-schweren-herzens-grosser-wandspiegel.mp3",
+                    "Maerchen/alice-unter-einem-sofa-chronosphaere-grosser-spiegel-wunderland.mp3",
+                    "Maerchen/alice-vorsichtig-spiegel-hand-tauchte-hinein.mp3",
+                    "Maerchen/scheekoenigin-tretet-naeher-ihr-kleinen.mp3",
+                    "Maerchen/schneekoenigin-dieser-spiegel-was-ist-damit.mp3",
+                    "Maerchen/schneekoenigin-ein-meisterwerk-landschaften-gekochter-spinat.mp3",
+                    "Maerchen/schneekoenigin-junge-kobolde-spiegel-welt-umher.mp3",
+                    "Maerchen/schneekoenigin-mitnichten-nur-ein-gewoehnlicher-spiegel.mp3",
+                    "Maerchen/schneekoenigin-nehmt-den-spiegel-gleich-mit-wahrheit.mp3",
+                    "Maerchen/schneekoenigin-nun-fliegt-schon-belustigt-die-anderen-mit-dem-spiegel-haha.mp3",
+                    "Maerchen/schneekoenigin-nur-ein-spiegel-weit-gefehlt.mp3",
+                    "Maerchen/was-sehe-ich-fuer-ein-schoenes-gesicht.mp3",
+                    "Maerchen/spieglein3.mp3",
+                    "Maerchen/sie-hatte-einen-zauberspiegel.mp3",
+                    "Maerchen/frau-koenigin-ihr-seid-die-schoenste-hier.mp3",
+                    "Maerchen/spieglein.mp3",
+                    "Maerchen/spieglein2.mp3",
+                    "Drei???/zauberspiegel.mp3",   
+                    "Drei???/zauberspiegel2.mp3,",
+                    "Drei???/zauberspiegel3.mp3",   
+                    "Drei???/zauberspiegel4.mp3",  
+                    "Drei???/zauberspiegel5.mp3",
+                    "Drei???/zauberspiegel6.mp3",
+                    "Drei???/zauberspiegel7.mp3",
+                    "Drei???/zauberspiegel8.mp3", 
+                    "Drei???/zauberspiegel9.mp3",
+                    "Drei???/zauberspiegel10.mp3",
+                    "Drei???/zauberspiegel11.mp3"                
+                ]
+            },
+            "16:20-16:21": {
+                "uri": [
+                    "Ghetto/ickeer-korrekt-jefaelltma-jehtab.mp3",
+                    "Ghetto/hitsfromthebong.mp3",
+                    "Ghetto/smoking.mp3"
+                ]
+            },
+            "20:00-23:59,00:00-07:59": {
+                "shuffle": true,
+                "suffix": "&volume=-30",
+                "uri": [
+                    "Futurama/futurama-zoidberg-openyourmouth.mp3",
+                    "HapeKerkeling/kerkeling-hehe-ja-toll.mp3",
+                    "HelgeSchneider/helge-total-aufgetakelt.mp3",
+                    "HelgeSchneider/helge-schoen-schickgemacht.mp3",
+                    "HelgeSchneider/helge-sehr-lecker.mp3",
+                    "KarlLagerfeld/lagerfeld-ja.mp3",
+                    "KarlLagerfeld/lagerfeld-das-ist-aber-huebsch-wo-haben-sie-denn-das-gefunden.mp3",
+                    "KarlLagerfeld/lagerfeld-kitsch-kann-sehr-stimulant-sein.mp3",
+                    "KarlLagerfeld/lagerfeld-ich-hasse-das.mp3",
+                    "KarlLagerfeld/lagerfeld-kann-man-da-fehler-finden.mp3",
+                    "KarlLagerfeld/lagerfeld-die-phantasie-muss-irgendwie-stimuliert-werden.mp3",
+                    "KarlLagerfeld/lagerfeld-eine-tolle-frau.mp3",
+                    "Liechtenstein/liechtenstein-geilertyp.mp3",
+                    "Liechtenstein/liechtenstein-beautiful.mp3",
+                    "Liechtenstein/liechtenstein-punkt-komma-strich-mondgesicht.mp3",
+                    "Liechtenstein/liechtenstein-du-bist-sehr-geil-supergeil.mp3",
+                    "Liechtenstein/liechtenstein-siehst-immer-top-aus-friese-sehr-geil.mp3",
+                    "Liechtenstein/liechtenstein-lass-dir-nix-anderes-erzaehlen.mp3",
+                    "Liechtenstein/liechtenstein-wie-du-das-immer-hinkriegst-weiss-ich-nicht.mp3"                
+                ]
+            } 
+        }
+    }
+}
