@@ -4,12 +4,12 @@
         {
             "level": [1,2],
             "overwrite": true,
-            "file": "events.log",
+            "file": "firefly/var/events.log",
             "limit": 25
         },
         {
             "level": 0, 
-            "file": "errors.log",
+            "file": "firefly/var/errors.log",
             "limit": 25
         }
     ],
