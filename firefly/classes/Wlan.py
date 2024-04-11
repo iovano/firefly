@@ -47,7 +47,7 @@ class Wlan(Loggable):
                 sleep(1)
             if (self.wlan.isconnected() and self.wlan.status() >= 0):
                 self.ip = self.wlan.ifconfig()[0]
-                self.log("WIFI Connection active ("+self.ip+")")
+                self.log("WIFI Connection active ("+self.ip+"/"+network.hostname()+")")
                 for i in range(8):
                     self.led.toggle()
                     sleep(0.05)
