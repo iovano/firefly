@@ -1,4 +1,12 @@
 {
+    "gpio": {
+        "input": 0,
+        "output": 1,
+        "inertia": 600,
+        "testMode": 0,
+        "on": 1,
+        "off": 0
+    },        
     "wifi": {
         "onSuccess": "http://pi-kitchen.fritz.box/alert/trigger.sh?sound=Epubli/test.wav",
         "hostname": "pico-kitchen"
