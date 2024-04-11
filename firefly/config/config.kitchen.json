@@ -1,0 +1,36 @@
+{
+    "wifi": {
+        "onSuccess": "http://pi-kitchen.fritz.box/alert/trigger.sh?sound=Epubli/test.wav",
+        "hostname": "pico-kitchen"
+    },
+    "trigger": {
+        "prefix": "http://pi-kitchen.fritz.box/alert/trigger.sh?sound=",
+        "uri": [
+            "Liechtenstein/liechtenstein-geilertyp.mp3"
+        ],
+        "suffix": "&volume=-20",        
+        "period": {
+            "08:00-20:00": {
+                "tact": 2,
+                "uri": [
+                    "Maerchen/alice-alles-sah-fast-genauso-aus-wie-auf-der-gegenseite.mp3"         
+                ]
+            },
+            "16:20-16:21": {
+                "uri": [
+                    "Ghetto/ickeer-korrekt-jefaelltma-jehtab.mp3",
+                    "Ghetto/hitsfromthebong.mp3",
+                    "Ghetto/smoking.mp3"
+                ]
+            },
+            "20:00-23:59,00:00-07:59": {
+                "shuffle": true,
+                "suffix": "&volume=-30",
+                "uri": [
+                    "HelgeSchneider/helge-sehr-lecker.mp3",
+                    "Liechtenstein/liechtenstein-wie-du-das-immer-hinkriegst-weiss-ich-nicht.mp3"                
+                ]
+            } 
+        }
+    }
+}

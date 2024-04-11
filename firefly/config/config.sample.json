@@ -1,5 +1,19 @@
 {
+    "include": ["config.kitchen.json"],
     "verbosity": 1,
+    "writer": [
+        {
+            "level": [1,2],
+            "overwrite": true,
+            "file": "events.log",
+            "limit": 25
+        },
+        {
+            "level": 0, 
+            "file": "errors.log",
+            "limit": 25
+        }
+    ],    
     "gpio": {
         "input": 16,
         "output": 4,
