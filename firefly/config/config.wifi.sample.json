@@ -1,0 +1,13 @@
+{
+    "wifi": {
+        "active": true,
+        "powersave": false,
+        "hostname": "pico-kitchen",
+        "country": "DE",
+        "network": {
+            "<NETWORK_SSID_1>" : "<NETWORK_PASSPHRASE>", 
+            "<NETWORK_SSID_2>": "<NETWORK_PASSPHRASE>"
+        },
+        "onSuccess": "http://example.com?sound=success.wav"
+    }
+}

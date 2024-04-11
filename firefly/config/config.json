@@ -1,0 +1,32 @@
+{
+    "verbosity": 3,
+    "writer": [
+        {
+            "level": [1,2],
+            "overwrite": true,
+            "file": "events.log",
+            "limit": 25
+        },
+        {
+            "level": 0, 
+            "file": "errors.log",
+            "limit": 25
+        }
+    ],
+    "trigger": {
+        "shuffle": false,
+        "tact": 1
+    },
+    "gpio": {
+        "input": 0,
+        "output": 1,
+        "inertia": 60,
+        "testMode": 0,
+        "on": 1,
+        "off": 0
+    },    
+    "include": [
+        "config.wifi.json",
+        "config.kitchen.json"
+    ]
+}
