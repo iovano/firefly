@@ -94,7 +94,6 @@ class Relay(Loggable):
                 if (current == self.off):
                     togo = round((self.counter - self.idleSince) / (self.inertia) * 100)
                     if (togo <= 50): 
-                        self.debug(str(togo))
                         blink = (self.counter % self.fps >= togo * self.fps / 50 or self.counter % 2 == 1)
                     elif (togo <= 100):
                         blink = (self.counter % self.fps >= (togo - 50) * self.fps / 50 - 1 and self.counter % 2 == 0)
@@ -118,6 +117,8 @@ class Relay(Loggable):
                 self.led.off()
                 self.output.low()
                 break
+            except Exception as e:
+                self.error(str(e))
 
         self.log("GPIO Relay termination")
         self.led.off() 
